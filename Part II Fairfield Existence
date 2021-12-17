@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<pthread.h>
+#include<stdbool.h>
+#include<sys/sysinfo.h>
+#include<unistd.h>
+
+int g = 0;
+void *myThreadFun(void *vargp){
+  int *myid = (int *)vargp;
+  static int s = 0;
+  ++s; ++g;
+  printf("Thread ID: %d, Statis: %d, Global: %d\n", *myid, ++s, ++g);
+}
+
+}
+
+void main() {
+  pthread_t t1
+    pthread_create(&t1,NULL,read_file);
+  pthread_join(t1,NULL)
+    }
+
+
+
+int
+main(int argc, char *argv[])
+{
+
+  double number=0.0;
+  printf("Enter a number to search for:");
+  scanf("%lf",&number);
+  printf("The number entered was: %lf\n",number);
+  printf("This system has %d processors configured and "
+	 "%d processors available.\n",get_nprocs_conf(), get_nprocs());
+  int j = get_nprocs();
+  int i;
+  pthread_t tid;
+  for (i = 0; i < 3; i++)
+    pthread_create(&tid,NULL,myThreadFun, (void *)&tid);
+
+  v
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+  
